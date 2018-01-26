@@ -9,13 +9,13 @@ public class shortIntByte {
         System.out.println(long1);
         unicode();
         operator();
-        System.out.println("Final Score is : "+score(true,10000,8,200));
-        System.out.println("Final Score is : "+score(true,1000,5,100));
-        System.out.println("Final Score is : "+score(false,10000,8,200));
-        displayHighScorePosition("Vinayak",1500);
-        displayHighScorePosition("Vinay",900);
-        displayHighScorePosition("Vinu",400);
-        displayHighScorePosition("Vin",50);
+        System.out.println("Final Score is : " + score(true, 10000, 8, 200));
+        System.out.println("Final Score is : " + score(true, 1000, 5, 100));
+        System.out.println("Final Score is : " + score(false, 10000, 8, 200));
+        displayHighScorePosition("Vinayak", 1500);
+        displayHighScorePosition("Vinay", 900);
+        displayHighScorePosition("Vinu", 400);
+        displayHighScorePosition("Vin", 50);
     }
 
     private static void floatDouble() {
@@ -38,34 +38,26 @@ public class shortIntByte {
             System.out.println("Test was over the limit");
     }
 
-    private static int score(boolean gameOver,int score,int lvl,int bonus){
-        if(gameOver)
-        {
-            return (score+(lvl*bonus));
+    private static int score(boolean gameOver, int score, int lvl, int bonus) {
+        if (gameOver) {
+            return (score + (lvl * bonus));
         }
         return 0;
     }
 
-    private static void displayHighScorePosition(String name,int highScore)
-    {
-        int pos=calculateHighScorePosition(highScore);
-        System.out.println(name+" managed to get into position "+pos);
+    private static void displayHighScorePosition(String name, int highScore) {
+        int pos = calculateHighScorePosition(highScore);
+        System.out.println(name + " managed to get into position " + pos);
     }
-    private static int calculateHighScorePosition(int score)
-    {
-        if(score>1000)
-        {
+
+    private static int calculateHighScorePosition(int score) {
+        if (score >= 1000) {
             return 1;
-        }
-        else if(score>500 && score<1000)
-        {
+        } else if (score >= 500 && score <= 999) {
             return 2;
-        }
-        else if(score>100 && score<500)
-        {
+        } else if (score >= 100 && score <= 499) {
             return 3;
-        }
-        else {
+        } else {
             return 4;
         }
     }
