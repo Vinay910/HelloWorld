@@ -1,3 +1,5 @@
+package com.Vinayak;
+
 public class shortIntByte {
 
     public static void main(String[] a) {
